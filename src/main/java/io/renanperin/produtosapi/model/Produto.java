@@ -6,6 +6,15 @@ public class Produto {
     private String nome;
     private String descricao;
     private Double preco;
+    private Double codBarras;
+
+    public Double getCodBarras() {
+        return codBarras;
+    }
+
+    public void setCodBarras(Double codBarras) {
+        this.codBarras = codBarras;
+    }
 
     public String getId() {
         return id;
@@ -39,13 +48,13 @@ public class Produto {
         this.preco = preco;
     }
 
-    @Override
     public String toString() {
         return "Produto{" +
                 "id='" + id + '\'' +
                 ", nome='" + nome + '\'' +
                 ", descricao='" + descricao + '\'' +
                 ", preco=" + preco +
+                ", codBarras=" + codBarras +
                 '}';
     }
 }
