@@ -1,18 +1,35 @@
 package io.renanperin.produtosapi.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "produto")
 public class Produto {
 
+    @Id
+    @Column(name = "id")
     private String id;
-    private String nome;
-    private String descricao;
-    private Double preco;
-    private Double codBarras;
 
-    public Double getCodBarras() {
+    @Column(name = "nome")
+    private String nome;
+
+    @Column(name = "descricao")
+    private String descricao;
+
+    @Column(name = "preco")
+    private Double preco;
+
+    @Column(name = "codBarras")
+    private String codBarras;
+
+    public String getCodBarras() {
         return codBarras;
     }
 
-    public void setCodBarras(Double codBarras) {
+    public void setCodBarras(String codBarras) {
         this.codBarras = codBarras;
     }
 
